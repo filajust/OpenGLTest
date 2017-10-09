@@ -15,6 +15,11 @@
 		DA1D1FDE1F89862B00862C5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D1FDD1F89862B00862C5A /* main.m */; };
 		DA1D1FE81F89862B00862C5A /* OpenGLTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D1FE71F89862B00862C5A /* OpenGLTestTests.m */; };
 		DA1D1FF31F89862B00862C5A /* OpenGLTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D1FF21F89862B00862C5A /* OpenGLTestUITests.m */; };
+		DA1D20041F8986B000862C5A /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1D20031F8986B000862C5A /* OpenGLView.m */; };
+		DA1D20071F8986E200862C5A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1D20061F8986E200862C5A /* QuartzCore.framework */; };
+		DA1D20091F8986F000862C5A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1D20081F8986F000862C5A /* OpenGLES.framework */; };
+		DA1D200B1F89958000862C5A /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = DA1D200A1F89957F00862C5A /* SimpleVertex.glsl */; };
+		DA1D200D1F89980500862C5A /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = DA1D200C1F89980500862C5A /* SimpleFragment.glsl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,12 @@
 		DA1D1FEE1F89862B00862C5A /* OpenGLTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenGLTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1D1FF21F89862B00862C5A /* OpenGLTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLTestUITests.m; sourceTree = "<group>"; };
 		DA1D1FF41F89862B00862C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA1D20021F8986B000862C5A /* OpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		DA1D20031F8986B000862C5A /* OpenGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
+		DA1D20061F8986E200862C5A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DA1D20081F8986F000862C5A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DA1D200A1F89957F00862C5A /* SimpleVertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = SimpleVertex.glsl; sourceTree = "<group>"; };
+		DA1D200C1F89980500862C5A /* SimpleFragment.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = SimpleFragment.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1D20091F8986F000862C5A /* OpenGLES.framework in Frameworks */,
+				DA1D20071F8986E200862C5A /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +98,7 @@
 				DA1D1FE61F89862B00862C5A /* OpenGLTestTests */,
 				DA1D1FF11F89862B00862C5A /* OpenGLTestUITests */,
 				DA1D1FCC1F89862B00862C5A /* Products */,
+				DA1D20051F8986E200862C5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +115,8 @@
 		DA1D1FCD1F89862B00862C5A /* OpenGLTest */ = {
 			isa = PBXGroup;
 			children = (
+				DA1D200C1F89980500862C5A /* SimpleFragment.glsl */,
+				DA1D200A1F89957F00862C5A /* SimpleVertex.glsl */,
 				DA1D1FCE1F89862B00862C5A /* AppDelegate.h */,
 				DA1D1FCF1F89862B00862C5A /* AppDelegate.m */,
 				DA1D1FD11F89862B00862C5A /* ViewController.h */,
@@ -110,6 +126,8 @@
 				DA1D1FD91F89862B00862C5A /* LaunchScreen.storyboard */,
 				DA1D1FDC1F89862B00862C5A /* Info.plist */,
 				DA1D1FDD1F89862B00862C5A /* main.m */,
+				DA1D20021F8986B000862C5A /* OpenGLView.h */,
+				DA1D20031F8986B000862C5A /* OpenGLView.m */,
 			);
 			path = OpenGLTest;
 			sourceTree = "<group>";
@@ -130,6 +148,15 @@
 				DA1D1FF41F89862B00862C5A /* Info.plist */,
 			);
 			path = OpenGLTestUITests;
+			sourceTree = "<group>";
+		};
+		DA1D20051F8986E200862C5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA1D20081F8986F000862C5A /* OpenGLES.framework */,
+				DA1D20061F8986E200862C5A /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +267,9 @@
 			files = (
 				DA1D1FDB1F89862B00862C5A /* LaunchScreen.storyboard in Resources */,
 				DA1D1FD81F89862B00862C5A /* Assets.xcassets in Resources */,
+				DA1D200B1F89958000862C5A /* SimpleVertex.glsl in Resources */,
 				DA1D1FD61F89862B00862C5A /* Main.storyboard in Resources */,
+				DA1D200D1F89980500862C5A /* SimpleFragment.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +297,7 @@
 				DA1D1FD31F89862B00862C5A /* ViewController.m in Sources */,
 				DA1D1FDE1F89862B00862C5A /* main.m in Sources */,
 				DA1D1FD01F89862B00862C5A /* AppDelegate.m in Sources */,
+				DA1D20041F8986B000862C5A /* OpenGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
